@@ -15,7 +15,7 @@ async function main() {
   client.user
     .setActivity(`$${await getPrice()}`, { type: "WATCHING" })
     .then((presence) =>
-      console.log(`Activity set to ${presence.activities[0].name}`)
+      console.log(`Activity set to €{presence.activities[0].name}`)
     )
     .catch((err) => console.log(err));
 }
